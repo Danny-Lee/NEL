@@ -9,10 +9,9 @@ public class CmdTest {
 		Runtime rt = Runtime.getRuntime();
 		Process p;
 		try {
-			p = rt.exec("pwd");
+			p = rt.exec("ls ../../raw");
 			InputStream in  = p.getInputStream();
 			InputStreamReader isr = new InputStreamReader(in);
-			System.out.println(isr.getEncoding());
 			BufferedReader br = new BufferedReader(isr);
 			String line;
 			while ((line = br.readLine()) != null) {
